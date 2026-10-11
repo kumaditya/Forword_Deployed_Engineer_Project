@@ -19,4 +19,9 @@ public class ChatController {
     public String ask(@RequestParam("message") String message) {
         return chatService.chat(message);
     }
+    
+    @GetMapping("/plan")
+    public String plan(@RequestParam("hours") String hours) {
+        return chatService.planDay(hours);
+    }
 }
